@@ -1,0 +1,70 @@
+[project]
+name = "ocupa-salas"
+version = "0.1.0"
+description = "Coletor + camada analítica de ocupação de salas — projeto de estudo/portfólio (dados fictícios)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "João Figueiredo" }]
+keywords = ["etl", "web-scraping", "airflow", "data-engineering", "medallion", "lgpd"]
+dependencies = [
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+# Fonte fictícia rodável + cliente de teste HTTP.
+mock = [
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "httpx>=0.27",
+    "python-multipart>=0.0.9",
+]
+# Captura semi-manual de fixtures reais (login SSO+MFA num browser).
+bootstrap = [
+    "playwright>=1.44",
+]
+# Ferramentas de desenvolvimento (inclui o extra 'mock').
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "httpx>=0.27",
+    "python-multipart>=0.0.9",
+]
+
+# Espelho para quem usa uv (PEP 735). pip usa o extra 'dev' acima.
+[dependency-groups]
+dev = [{ include-group = "test" }]
+test = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[project.scripts]
+ocupa-salas = "ocupa_salas.__main__:main"
+ocupa-salas-bootstrap = "ocupa_salas.bootstrap:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ocupa_salas", "mock_server"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+pythonpath = ["src", "."]
+filterwarnings = [
+    "ignore:You should not use the 'timeout' argument with the TestClient",
+    "ignore:Using `httpx` with `starlette.testclient` is deprecated",
+]
+
+[tool.ruff]
+src = ["src", "tests", "mock_server"]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Testes / lint
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Saída do coletor
+data/
+*.jsonl
+
+# Capturas cruas do bootstrap — HTML/JSON com PII, NUNCA versionar
+# (fixtures scrubadas ficam em tests/fixtures/ e são versionadas)
+.captures/
+
+# Segredos
+*.env
+.env.*
+!.env.example
+secrets/
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

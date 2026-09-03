@@ -1,0 +1,490 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<meta name="csrf-param" content="reservaspace_csrf">
+<meta name="csrf-token" content="TESTE-CSRF-TOKEN-abc123">
+</head><body>
+<div id="calendarioReservas"></div>
+<script>
+jQuery('#calendarioReservas').fullCalendar({
+  "editable": false,
+  "events": [
+  {
+    "id": null,
+    "title": "",
+    "start": "2026-08-14",
+    "end": "2026-08-14",
+    "nonstandard": {
+      "primeiroDoDia": true,
+      "reservas": []
+    }
+  },
+  {
+    "id": 1001,
+    "title": "08:00 - 12:00",
+    "start": "2026-08-14T08:00:00-03:00",
+    "end": "2026-08-14T12:00:00-03:00",
+    "nonstandard": {
+      "reservas": [
+        {
+          "idReserva": 100001,
+          "idSalaReserva": 5,
+          "idMembro": 9000,
+          "idStatusReserva": 1,
+          "idStatusPendencia": null,
+          "idPostoLocal": "401P1",
+          "idSala": "401",
+          "idFaixaHorario": "1071",
+          "dataReserva": "2026-08-14T08:30:00-03:00",
+          "idReservadoPor": "USR-AAAA-0001",
+          "dataCriacaoReserva": "2026-08-01T10:00:00-03:00",
+          "atualizadoPor": "USR-AAAA-0002",
+          "atualizadoEm": "2026-08-14T08:35:00-03:00",
+          "checkIn": null,
+          "checkOut": null,
+          "checkInPor": null,
+          "checkOutPor": null,
+          "cancelado": 0,
+          "canceladoPor": null,
+          "atendidoPor": null,
+          "observacao": "TEXTO LIVRE DIGITADO - risco de PII",
+          "membro": {
+            "idMembro": 9000,
+            "nome": "FULANO SINTÉTICO DE TAL",
+            "cpf": "000.000.000-00",
+            "rg": "00.000.000-0",
+            "passaporte": "AB000000",
+            "dataNascimento": "1990-01-01",
+            "sexo": "M",
+            "email": "fake@example.invalid",
+            "telefoneCelular": "(00) 00000-0000",
+            "contatoEmergencia": "FALSO (00) 90000-0000",
+            "matriculaContrato": "CT-0001",
+            "dataAdesao": "2024-01-01",
+            "dataEncerramento": null,
+            "ativo": 1,
+            "categoriaPlano": "CORPORATIVO",
+            "planoSaudeNumero": "SIM-000000",
+            "necessidadesAcessibilidade": "",
+            "restricaoMobilidade": 0,
+            "preferenciasAlimentares": "",
+            "setorCodCrm": "CRM-SET-1",
+            "setorNomeCrm": "SETOR SINTÉTICO",
+            "centroCustoCodCrm": "CRM-CC-9",
+            "centroCustoNomeCrm": "CC SINTÉTICO",
+            "codMembroCrm": "CRM-M-1",
+            "codContratoCrm": "CRM-CT-1",
+            "unidadeNegocioCrm": "UN SINTÉTICA",
+            "id_contrato_crm": "CRM-1",
+            "contrato": {
+              "cnpj": "11.111.111/0001-11",
+              "razaoSocial": "CONTRATANTE SINTÉTICA LTDA",
+              "endereco": "RUA FALSA, 123",
+              "empresa": {
+                "cnpj": "22.222.222/0001-22",
+                "razaoSocial": "GRUPO SINTÉTICO S.A."
+              }
+            }
+          },
+          "sala": {
+            "id": "401",
+            "nome": "SALA SINTÉTICA"
+          },
+          "statusReserva": {
+            "id": 1,
+            "nome": "STATUS 1"
+          }
+        },
+        {
+          "idReserva": 100002,
+          "idSalaReserva": 5,
+          "idMembro": 9000,
+          "idStatusReserva": 4,
+          "idStatusPendencia": null,
+          "idPostoLocal": "401P1",
+          "idSala": "401",
+          "idFaixaHorario": "1071",
+          "dataReserva": "2026-08-14T08:30:00-03:00",
+          "idReservadoPor": "USR-AAAA-0001",
+          "dataCriacaoReserva": "2026-08-01T10:00:00-03:00",
+          "atualizadoPor": "USR-AAAA-0002",
+          "atualizadoEm": "2026-08-14T08:35:00-03:00",
+          "checkIn": "2026-08-14T08:28:00-03:00",
+          "checkOut": "2026-08-14T09:10:00-03:00",
+          "checkInPor": "USR-BBBB-0003",
+          "checkOutPor": "USR-BBBB-0003",
+          "cancelado": 0,
+          "canceladoPor": null,
+          "atendidoPor": "USR-PROF-0009",
+          "observacao": "TEXTO LIVRE DIGITADO - risco de PII",
+          "membro": {
+            "idMembro": 9000,
+            "nome": "FULANO SINTÉTICO DE TAL",
+            "cpf": "000.000.000-00",
+            "rg": "00.000.000-0",
+            "passaporte": "AB000000",
+            "dataNascimento": "1990-01-01",
+            "sexo": "M",
+            "email": "fake@example.invalid",
+            "telefoneCelular": "(00) 00000-0000",
+            "contatoEmergencia": "FALSO (00) 90000-0000",
+            "matriculaContrato": "CT-0001",
+            "dataAdesao": "2024-01-01",
+            "dataEncerramento": null,
+            "ativo": 1,
+            "categoriaPlano": "CORPORATIVO",
+            "planoSaudeNumero": "SIM-000000",
+            "necessidadesAcessibilidade": "",
+            "restricaoMobilidade": 0,
+            "preferenciasAlimentares": "",
+            "setorCodCrm": "CRM-SET-1",
+            "setorNomeCrm": "SETOR SINTÉTICO",
+            "centroCustoCodCrm": "CRM-CC-9",
+            "centroCustoNomeCrm": "CC SINTÉTICO",
+            "codMembroCrm": "CRM-M-1",
+            "codContratoCrm": "CRM-CT-1",
+            "unidadeNegocioCrm": "UN SINTÉTICA",
+            "id_contrato_crm": "CRM-1",
+            "contrato": {
+              "cnpj": "11.111.111/0001-11",
+              "razaoSocial": "CONTRATANTE SINTÉTICA LTDA",
+              "endereco": "RUA FALSA, 123",
+              "empresa": {
+                "cnpj": "22.222.222/0001-22",
+                "razaoSocial": "GRUPO SINTÉTICO S.A."
+              }
+            }
+          },
+          "sala": {
+            "id": "401",
+            "nome": "SALA SINTÉTICA"
+          },
+          "statusReserva": {
+            "id": 4,
+            "nome": "STATUS 4"
+          }
+        },
+        {
+          "idReserva": 100003,
+          "idSalaReserva": 5,
+          "idMembro": 9000,
+          "idStatusReserva": 4,
+          "idStatusPendencia": null,
+          "idPostoLocal": "401P1",
+          "idSala": "401",
+          "idFaixaHorario": "1071",
+          "dataReserva": "2026-08-14T08:30:00-03:00",
+          "idReservadoPor": "USR-AAAA-0001",
+          "dataCriacaoReserva": "2026-08-01T10:00:00-03:00",
+          "atualizadoPor": "USR-AAAA-0002",
+          "atualizadoEm": "2026-08-14T08:35:00-03:00",
+          "checkIn": "2026-08-14T08:28:00-03:00",
+          "checkOut": "2026-08-14T09:10:00-03:00",
+          "checkInPor": "USR-BBBB-0003",
+          "checkOutPor": "USR-BBBB-0003",
+          "cancelado": 0,
+          "canceladoPor": null,
+          "atendidoPor": "USR-PROF-0009",
+          "observacao": "TEXTO LIVRE DIGITADO - risco de PII",
+          "membro": {
+            "idMembro": 9000,
+            "nome": "FULANO SINTÉTICO DE TAL",
+            "cpf": "000.000.000-00",
+            "rg": "00.000.000-0",
+            "passaporte": "AB000000",
+            "dataNascimento": "1990-01-01",
+            "sexo": "M",
+            "email": "fake@example.invalid",
+            "telefoneCelular": "(00) 00000-0000",
+            "contatoEmergencia": "FALSO (00) 90000-0000",
+            "matriculaContrato": "CT-0001",
+            "dataAdesao": "2024-01-01",
+            "dataEncerramento": null,
+            "ativo": 1,
+            "categoriaPlano": "CORPORATIVO",
+            "planoSaudeNumero": "SIM-000000",
+            "necessidadesAcessibilidade": "",
+            "restricaoMobilidade": 0,
+            "preferenciasAlimentares": "",
+            "setorCodCrm": "CRM-SET-1",
+            "setorNomeCrm": "SETOR SINTÉTICO",
+            "centroCustoCodCrm": "CRM-CC-9",
+            "centroCustoNomeCrm": "CC SINTÉTICO",
+            "codMembroCrm": "CRM-M-1",
+            "codContratoCrm": "CRM-CT-1",
+            "unidadeNegocioCrm": "UN SINTÉTICA",
+            "id_contrato_crm": "CRM-1",
+            "contrato": {
+              "cnpj": "11.111.111/0001-11",
+              "razaoSocial": "CONTRATANTE SINTÉTICA LTDA",
+              "endereco": "RUA FALSA, 123",
+              "empresa": {
+                "cnpj": "22.222.222/0001-22",
+                "razaoSocial": "GRUPO SINTÉTICO S.A."
+              }
+            }
+          },
+          "sala": {
+            "id": "401",
+            "nome": "SALA SINTÉTICA"
+          },
+          "statusReserva": {
+            "id": 4,
+            "nome": "STATUS 4"
+          }
+        }
+      ],
+      "countPorStatus": {
+        "reservado": 1,
+        "checkOut": 2
+      }
+    }
+  },
+  {
+    "id": 1002,
+    "title": "13:00 - 18:00",
+    "start": "2026-08-14T13:00:00-03:00",
+    "end": "2026-08-14T18:00:00-03:00",
+    "nonstandard": {
+      "reservas": [
+        {
+          "idReserva": 100004,
+          "idSalaReserva": 5,
+          "idMembro": 9000,
+          "idStatusReserva": 3,
+          "idStatusPendencia": null,
+          "idPostoLocal": "401P1",
+          "idSala": "401",
+          "idFaixaHorario": "1071",
+          "dataReserva": "2026-08-14T08:30:00-03:00",
+          "idReservadoPor": "USR-AAAA-0001",
+          "dataCriacaoReserva": "2026-08-01T10:00:00-03:00",
+          "atualizadoPor": "USR-AAAA-0002",
+          "atualizadoEm": "2026-08-14T08:35:00-03:00",
+          "checkIn": "2026-08-14T08:28:00-03:00",
+          "checkOut": null,
+          "checkInPor": "USR-BBBB-0003",
+          "checkOutPor": null,
+          "cancelado": 0,
+          "canceladoPor": null,
+          "atendidoPor": null,
+          "observacao": "TEXTO LIVRE DIGITADO - risco de PII",
+          "membro": {
+            "idMembro": 9000,
+            "nome": "FULANO SINTÉTICO DE TAL",
+            "cpf": "000.000.000-00",
+            "rg": "00.000.000-0",
+            "passaporte": "AB000000",
+            "dataNascimento": "1990-01-01",
+            "sexo": "M",
+            "email": "fake@example.invalid",
+            "telefoneCelular": "(00) 00000-0000",
+            "contatoEmergencia": "FALSO (00) 90000-0000",
+            "matriculaContrato": "CT-0001",
+            "dataAdesao": "2024-01-01",
+            "dataEncerramento": null,
+            "ativo": 1,
+            "categoriaPlano": "CORPORATIVO",
+            "planoSaudeNumero": "SIM-000000",
+            "necessidadesAcessibilidade": "",
+            "restricaoMobilidade": 0,
+            "preferenciasAlimentares": "",
+            "setorCodCrm": "CRM-SET-1",
+            "setorNomeCrm": "SETOR SINTÉTICO",
+            "centroCustoCodCrm": "CRM-CC-9",
+            "centroCustoNomeCrm": "CC SINTÉTICO",
+            "codMembroCrm": "CRM-M-1",
+            "codContratoCrm": "CRM-CT-1",
+            "unidadeNegocioCrm": "UN SINTÉTICA",
+            "id_contrato_crm": "CRM-1",
+            "contrato": {
+              "cnpj": "11.111.111/0001-11",
+              "razaoSocial": "CONTRATANTE SINTÉTICA LTDA",
+              "endereco": "RUA FALSA, 123",
+              "empresa": {
+                "cnpj": "22.222.222/0001-22",
+                "razaoSocial": "GRUPO SINTÉTICO S.A."
+              }
+            }
+          },
+          "sala": {
+            "id": "401",
+            "nome": "SALA SINTÉTICA"
+          },
+          "statusReserva": {
+            "id": 3,
+            "nome": "STATUS 3"
+          }
+        },
+        {
+          "idReserva": 100005,
+          "idSalaReserva": 5,
+          "idMembro": 9000,
+          "idStatusReserva": 2,
+          "idStatusPendencia": null,
+          "idPostoLocal": "401P1",
+          "idSala": "401",
+          "idFaixaHorario": "1071",
+          "dataReserva": "2026-08-14T08:30:00-03:00",
+          "idReservadoPor": "USR-AAAA-0001",
+          "dataCriacaoReserva": "2026-08-01T10:00:00-03:00",
+          "atualizadoPor": "USR-AAAA-0002",
+          "atualizadoEm": "2026-08-14T08:35:00-03:00",
+          "checkIn": null,
+          "checkOut": null,
+          "checkInPor": null,
+          "checkOutPor": null,
+          "cancelado": 1,
+          "canceladoPor": "USR-CCCC-0004",
+          "atendidoPor": null,
+          "observacao": "TEXTO LIVRE DIGITADO - risco de PII",
+          "membro": {
+            "idMembro": 9000,
+            "nome": "FULANO SINTÉTICO DE TAL",
+            "cpf": "000.000.000-00",
+            "rg": "00.000.000-0",
+            "passaporte": "AB000000",
+            "dataNascimento": "1990-01-01",
+            "sexo": "M",
+            "email": "fake@example.invalid",
+            "telefoneCelular": "(00) 00000-0000",
+            "contatoEmergencia": "FALSO (00) 90000-0000",
+            "matriculaContrato": "CT-0001",
+            "dataAdesao": "2024-01-01",
+            "dataEncerramento": null,
+            "ativo": 1,
+            "categoriaPlano": "CORPORATIVO",
+            "planoSaudeNumero": "SIM-000000",
+            "necessidadesAcessibilidade": "",
+            "restricaoMobilidade": 0,
+            "preferenciasAlimentares": "",
+            "setorCodCrm": "CRM-SET-1",
+            "setorNomeCrm": "SETOR SINTÉTICO",
+            "centroCustoCodCrm": "CRM-CC-9",
+            "centroCustoNomeCrm": "CC SINTÉTICO",
+            "codMembroCrm": "CRM-M-1",
+            "codContratoCrm": "CRM-CT-1",
+            "unidadeNegocioCrm": "UN SINTÉTICA",
+            "id_contrato_crm": "CRM-1",
+            "contrato": {
+              "cnpj": "11.111.111/0001-11",
+              "razaoSocial": "CONTRATANTE SINTÉTICA LTDA",
+              "endereco": "RUA FALSA, 123",
+              "empresa": {
+                "cnpj": "22.222.222/0001-22",
+                "razaoSocial": "GRUPO SINTÉTICO S.A."
+              }
+            }
+          },
+          "sala": {
+            "id": "401",
+            "nome": "SALA SINTÉTICA"
+          },
+          "statusReserva": {
+            "id": 2,
+            "nome": "STATUS 2"
+          }
+        }
+      ],
+      "countPorStatus": {
+        "checkIn": 1,
+        "cancelado": 1
+      }
+    }
+  },
+  {
+    "id": null,
+    "title": "",
+    "start": "2026-08-15",
+    "end": "2026-08-15",
+    "nonstandard": {
+      "primeiroDoDia": true,
+      "reservas": []
+    }
+  },
+  {
+    "id": 1003,
+    "title": "08:00 - 12:00",
+    "start": "2026-08-15T08:00:00-03:00",
+    "end": "2026-08-15T12:00:00-03:00",
+    "nonstandard": {
+      "reservas": [
+        {
+          "idReserva": 100006,
+          "idSalaReserva": 5,
+          "idMembro": 9001,
+          "idStatusReserva": 5,
+          "idStatusPendencia": null,
+          "idPostoLocal": "401P1",
+          "idSala": "401",
+          "idFaixaHorario": "1071",
+          "dataReserva": "2026-08-14T08:30:00-03:00",
+          "idReservadoPor": "USR-AAAA-0001",
+          "dataCriacaoReserva": "2026-08-01T10:00:00-03:00",
+          "atualizadoPor": "USR-AAAA-0002",
+          "atualizadoEm": "2026-08-14T08:35:00-03:00",
+          "checkIn": null,
+          "checkOut": null,
+          "checkInPor": null,
+          "checkOutPor": null,
+          "cancelado": 0,
+          "canceladoPor": null,
+          "atendidoPor": null,
+          "observacao": "TEXTO LIVRE DIGITADO - risco de PII",
+          "membro": {
+            "idMembro": 9001,
+            "nome": "FULANO SINTÉTICO DE TAL",
+            "cpf": "000.000.000-00",
+            "rg": "00.000.000-0",
+            "passaporte": "AB000000",
+            "dataNascimento": "1990-01-01",
+            "sexo": "M",
+            "email": "fake@example.invalid",
+            "telefoneCelular": "(00) 00000-0000",
+            "contatoEmergencia": "FALSO (00) 90000-0000",
+            "matriculaContrato": "CT-0001",
+            "dataAdesao": "2024-01-01",
+            "dataEncerramento": null,
+            "ativo": 1,
+            "categoriaPlano": "CORPORATIVO",
+            "planoSaudeNumero": "SIM-000000",
+            "necessidadesAcessibilidade": "",
+            "restricaoMobilidade": 0,
+            "preferenciasAlimentares": "",
+            "setorCodCrm": "CRM-SET-1",
+            "setorNomeCrm": "SETOR SINTÉTICO",
+            "centroCustoCodCrm": "CRM-CC-9",
+            "centroCustoNomeCrm": "CC SINTÉTICO",
+            "codMembroCrm": "CRM-M-1",
+            "codContratoCrm": "CRM-CT-1",
+            "unidadeNegocioCrm": "UN SINTÉTICA",
+            "id_contrato_crm": "CRM-1",
+            "contrato": {
+              "cnpj": "11.111.111/0001-11",
+              "razaoSocial": "CONTRATANTE SINTÉTICA LTDA",
+              "endereco": "RUA FALSA, 123",
+              "empresa": {
+                "cnpj": "22.222.222/0001-22",
+                "razaoSocial": "GRUPO SINTÉTICO S.A."
+              }
+            }
+          },
+          "sala": {
+            "id": "401",
+            "nome": "SALA SINTÉTICA"
+          },
+          "statusReserva": {
+            "id": 5,
+            "nome": "STATUS 5"
+          }
+        }
+      ],
+      "countPorStatus": {
+        "noShow": 1
+      }
+    }
+  }
+]
+});
+</script>
+</body></html>

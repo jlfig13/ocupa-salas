@@ -1,0 +1,26 @@
+[
+  {
+    "idSala": "401",
+    "maxReservas": "8",
+    "nome": "SALA FOCO 01_MANHA",
+    "idFaixaHorario": "1071",
+    "alteraSala": [
+      {
+        "idAlteraSala": "4",
+        "maxReserva": "16",
+        "dataInicio": "2026-08-14",
+        "dataFim": "2026-08-14",
+        "ativo": "1"
+      }
+    ],
+    "postos": [
+      {
+        "idPostoLocal": "401P1",
+        "nomeProc": "Estação de trabalho",
+        "maxReservas": "0",
+        "peso": "1",
+        "ativo": "1"
+      }
+    ]
+  }
+]
