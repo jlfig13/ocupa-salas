@@ -10,10 +10,6 @@ sem API** — e a modela em camadas medallion para um BI de ocupação.
 > embutido em `<script>`, CSRF no `<meta>`, POST que exige `X-Requested-With`,
 > seleção de contexto de sessão, PII de terceiros no payload). Nenhuma
 > informação de empresa, pessoa ou sistema real é usada.
->
-> Este repositório é a reescrita, para portfólio, de um projeto corporativo que
-> não pode ser publicado. Os **conceitos e a arquitetura** são os mesmos; os
-> dados, endpoints e nomes, todos inventados.
 
 ## O que este projeto demonstra
 
