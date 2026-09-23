@@ -1,0 +1,26 @@
+[
+  {
+    "idSala": "401",
+    "lotacaoMax": "8",
+    "nome": "SALA FOCO 01_MANHA",
+    "idTurno": "1071",
+    "ajustesCapacidade": [
+      {
+        "idAjuste": "4",
+        "lotacaoAjustada": "16",
+        "dataInicio": "2026-08-14",
+        "dataFim": "2026-08-14",
+        "ativo": "1"
+      }
+    ],
+    "postos": [
+      {
+        "idPosto": "401P1",
+        "nomePosto": "Estação de trabalho",
+        "lotacaoMax": "0",
+        "peso": "1",
+        "ativo": "1"
+      }
+    ]
+  }
+]
